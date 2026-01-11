@@ -23,32 +23,42 @@ endif
 let g:colors_name='momo'
 
 if !exists('g:momo_background_color')
-    let g:momo_background_color=['#000000', 16]
+    let g:momo_background_color = ['#000000', 16]
 endif
 
 if !exists('g:momo_foreground_color')
-    let g:momo_foreground_color=['#eeeeee', 255]
+    let g:momo_foreground_color = ['#eeeeee', 255]
 endif
 
 if !exists('g:momo_highlight_color')
-    let g:momo_highlight_color=['#808080', 244]
+    let g:momo_highlight_color = ['#808080', 244]
 endif
 
 if !exists('g:momo_comment_color')
-    let g:momo_comment_color=['#808080', 244]
+    let g:momo_comment_color = ['#808080', 244]
+endif
+
+if !exists('g:momo_function_color')
+    let g:momo_function_color = g:momo_foreground_color
+endif
+
+if !exists('g:momo_constant_color')
+    let g:momo_constant_color = g:momo_highlight_color
 endif
 
 if !exists('g:momo_transparent_background')
-    let g:momo_transparent_background=0
+    let g:momo_transparent_background = 0
 endif
 
 if !exists('g:momo_italic_comments')
-    let g:momo_italic_comments=0
+    let g:momo_italic_comments = 0
 endif
 
 let s:bg_col = g:momo_background_color
 let s:fg_col = g:momo_foreground_color
 let s:hl_col = g:momo_highlight_color
+let s:fn_col = g:momo_function_color
+let s:cs_col = g:momo_constant_color
 let s:cm_col = g:momo_comment_color
 let s:none   = ['none', 'none']
 
@@ -121,9 +131,9 @@ call s:hl('Comment',         s:cm_col, s:none,   g:momo_italic_comments? 'italic
 highlight! link Todo         Comment
 
 call s:hl('Identifier',      s:fg_col, s:none,   'none')
-call s:hl('Function',        s:fg_col, s:none,   'none')
+call s:hl('Function',        s:fn_col, s:none,   'none')
 
-call s:hl('Constant',        s:hl_col, s:none,   'none')
+call s:hl('Constant',        s:cs_col, s:none,   'none')
 highlight! link Number       Constant
 highlight! link String       Constant
 highlight! link Character    Constant
