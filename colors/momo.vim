@@ -38,14 +38,6 @@ if !exists('g:momo_comment_color')
     let g:momo_comment_color = ['#808080', 244]
 endif
 
-if !exists('g:momo_function_color')
-    let g:momo_function_color = g:momo_foreground_color
-endif
-
-if !exists('g:momo_constant_color')
-    let g:momo_constant_color = g:momo_highlight_color
-endif
-
 if !exists('g:momo_transparent_background')
     let g:momo_transparent_background = 0
 endif
@@ -57,9 +49,9 @@ endif
 let s:bg_col = g:momo_background_color
 let s:fg_col = g:momo_foreground_color
 let s:hl_col = g:momo_highlight_color
-let s:fn_col = g:momo_function_color
-let s:cs_col = g:momo_constant_color
 let s:cm_col = g:momo_comment_color
+let s:fn_col = exists('g:momo_function_color')? g:momo_function_color : g:momo_foreground_color
+let s:cs_col = exists('g:momo_constant_color')? g:momo_constant_color : g:momo_highlight_color
 let s:none   = ['none', 'none']
 
 function! s:hl(item, foreground, background, style)
