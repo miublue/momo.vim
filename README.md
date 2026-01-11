@@ -13,17 +13,17 @@ to your init file.
 ## Configuration
 Put this on your _~/.vimrc_:
 ```Vim
-    colorscheme momo
+colorscheme momo
 ```
 
 Background color can be turned off (terminal must support transparency):
 ```Vim
-    let g:momo_transparent_background = 1
+let g:momo_transparent_background = 1
 ```
 
 Comments can be turned italics:
 ```Vim
-    let g:momo_italic_comments = 1
+let g:momo_italic_comments = 1
 ```
 
 All colors can be changed:
