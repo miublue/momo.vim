@@ -46,6 +46,10 @@ if !exists('g:momo_italic_comments')
     let g:momo_italic_comments = 0
 endif
 
+if !exists('g:momo_bold_keywords')
+    let g:momo_bold_keywords = 0
+endif
+
 let s:bg_col = g:momo_background_color
 let s:fg_col = g:momo_foreground_color
 let s:hl_col = g:momo_highlight_color
@@ -53,6 +57,9 @@ let s:cm_col = g:momo_comment_color
 let s:fn_col = exists('g:momo_function_color')? g:momo_function_color : g:momo_foreground_color
 let s:cs_col = exists('g:momo_constant_color')? g:momo_constant_color : g:momo_highlight_color
 let s:none   = ['none', 'none']
+
+let s:c_attr = g:momo_italic_comments? 'italic' : 'none'
+let s:k_attr = g:momo_bold_keywords? 'bold' : 'none'
 
 function! s:hl(item, foreground, background, style)
     let cmd  = 'highlight ' . a:item
@@ -86,7 +93,7 @@ call s:hl('VertSplit',       s:fg_col, s:none,   'none')
 call s:hl('CursorColumn',    s:none,   s:none,   'none')
 call s:hl('CursorLine',      s:none,   s:none,   'none')
 call s:hl('LineNr',          s:cm_col, s:none,   'none')
-call s:hl('CursorLineNr',    s:fg_col, s:none,   'none')
+call s:hl('CursorLineNr',    s:hl_col, s:none,   s:k_attr)
 
 " Visual
 call s:hl('Visual',          s:fg_col, s:bg_col, 'reverse')
@@ -119,7 +126,7 @@ call s:hl('DiffAdd',         s:hl_col, s:none,   'none')
 call s:hl('DiffText',        s:fg_col, s:none,   'none')
 
 " Syntax
-call s:hl('Comment',         s:cm_col, s:none,   g:momo_italic_comments? 'italic' : 'none')
+call s:hl('Comment',         s:cm_col, s:none,   s:c_attr)
 highlight! link Todo         Comment
 
 call s:hl('Identifier',      s:fg_col, s:none,   'none')
@@ -133,7 +140,7 @@ highlight! link Boolean      Constant
 highlight! link Float        Constant
 
 call s:hl('Operator',        s:hl_col, s:none,   'none')
-call s:hl('Keyword',         s:hl_col, s:none,   'none')
+call s:hl('Keyword',         s:hl_col, s:none,   s:k_attr)
 highlight! link Statement    Keyword
 highlight! link Structure    Keyword
 highlight! link Conditional  Keyword
@@ -143,11 +150,11 @@ highlight! link Label        Keyword
 highlight! link Special      Keyword
 highlight! link SpecialChar  Keyword
 
-call s:hl('Type',            s:hl_col, s:none,   'none')
+call s:hl('Type',            s:hl_col, s:none,   s:k_attr)
 highlight! link TypeDef      Type
 highlight! link StorageClass Type
 
-call s:hl('PreProc',         s:hl_col, s:none,   'none')
+call s:hl('PreProc',         s:hl_col, s:none,   s:k_attr)
 highlight! link PreCondit    PreProc
 highlight! link Include      PreProc
 highlight! link Define       PreProc
