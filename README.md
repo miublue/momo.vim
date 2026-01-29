@@ -26,6 +26,11 @@ Comments can be turned italics:
 let g:momo_italic_comments = 1
 ```
 
+Keywords can be turned bold:
+```Vim
+let g:momo_bold_keywords = 1
+```
+
 All colors can be changed:
 ```Vim
 " colors are [hex, ansi]
