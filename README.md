@@ -5,34 +5,34 @@
 
 ## Install
 Installation may vary depending on how you manage your plugins, for example, when using [vim-plug](https://github.com/junegunn/vim-plug), add
-```Vim
+```vim
 Plug 'miublue/momo.vim'
 ```
 to your init file.
 
 ## Configuration
 Put this on your _~/.vimrc_:
-```Vim
+```vim
 colorscheme momo
 ```
 
 Background color can be turned off (terminal must support transparency):
-```Vim
+```vim
 let g:momo_transparent_background = 1
 ```
 
 Comments can be turned italics:
-```Vim
+```vim
 let g:momo_italic_comments = 1
 ```
 
 Keywords can be turned bold:
-```Vim
+```vim
 let g:momo_bold_keywords = 1
 ```
 
 All colors can be changed:
-```Vim
+```vim
 " colors are [hex, ansi]
 let g:momo_background_color = ["#000000", 0]
 let g:momo_foreground_color = ["#eeeeee", 255]
