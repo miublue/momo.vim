@@ -16,7 +16,7 @@ Put this on your _~/.vimrc_:
 colorscheme momo
 ```
 
-Background color can be turned off (terminal must support transparency):
+Background color can be turned off (it will use the terminal's background color):
 ```vim
 let g:momo_transparent_background = 1
 ```
