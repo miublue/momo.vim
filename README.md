@@ -1,7 +1,8 @@
 <h1 align="center">Momo</h1>
 <p align="center">Minimalistic dark theme for vim.</p>
 <img align="center" src="./images/preview.png"/>
-<p align="center">Original theme on the left, slight recolor on the right.</p>
+
+Momo is a simple and (somewhat) customizable dark colorscheme that doesn't get in your way.
 
 ## Install
 Installation may vary depending on how you manage your plugins,
@@ -12,7 +13,7 @@ Plug 'miublue/momo.vim'
 to your init file.
 
 ## Configuration
-Put this on your _~/.vimrc_:
+Put this on your `~/.vimrc`:
 ```vim
 colorscheme momo
 ```
