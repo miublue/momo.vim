@@ -31,7 +31,7 @@ if !exists('g:momo_foreground_color')
 endif
 
 if !exists('g:momo_highlight_color')
-    let g:momo_highlight_color = ['#808080', 244]
+    let g:momo_highlight_color = ['#87d7ff', 117]
 endif
 
 if !exists('g:momo_comment_color')
