@@ -81,7 +81,7 @@ call s:hl('Directory',       s:hl_col, s:none,   'NONE')
 call s:hl('Ignore',          s:hl_col, s:none,   'NONE')
 call s:hl('NonText',         s:cm_col, s:none,   'NONE')
 call s:hl('SpecialKey',      s:hl_col, s:none,   'NONE')
-call s:hl('UNDERLINEd',      s:hl_col, s:none,   'UNDERLINE')
+call s:hl('underlined',      s:hl_col, s:none,   'UNDERLINE')
 call s:hl('Title',           s:hl_col, s:none,   'NONE')
 
 " Status Line
@@ -123,7 +123,7 @@ call s:hl('TabLineSel',      s:hl_col, s:none,   'UNDERLINE')
 call s:hl('DiffChange',      s:hl_col, s:none,   'NONE')
 call s:hl('DiffDelete',      s:hl_col, s:none,   'NONE')
 call s:hl('DiffAdd',         s:hl_col, s:none,   'NONE')
-call s:hl('DiffText',        s:fg_col, s:none,   'NONE')
+call s:hl('DiffText',        s:hl_col, s:none,   'NONE')
 
 " Syntax
 call s:hl('Comment',         s:cm_col, s:none,   s:c_attr)
