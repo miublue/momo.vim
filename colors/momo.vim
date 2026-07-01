@@ -71,7 +71,7 @@ endfunction
 
 " Basic
 call s:hl('Normal',          s:fg_col, g:momo_transparent_background? s:none : s:bg_col, 'NONE')
-call s:hl('Cursor',          s:fg_col, s:none,   'NONE')
+call s:hl('Cursor',          s:fg_col, s:bg_col, 'REVERSE') " Cursor for GUI version
 call s:hl('Folded',          s:fg_col, s:none,   'REVERSE')
 call s:hl('WildMenu',        s:fg_col, s:none,   'REVERSE')
 call s:hl('MatchParen',      s:hl_col, s:bg_col, 'UNDERLINE')
